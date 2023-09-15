@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar String Detection</title>
+    <link rel="stylesheet" href="css2.css">
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+
+<body>
+
+    <header class="header-fixed">
+
+        <div class="header-limiter">
+
+            <h1><a href="#">Play<span>Guitar</span></a></h1>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#" class="selected">Blog</a>
+                <a href="#">Pricing</a>
+                <a href="#">About</a>
+                <a href="#">Faq</a>
+                <a href="#">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+    <h1 class="neon">Guitar String Detection</h1>
+    <div id="container">
+        <div class="fileUpload">
+            <input type="file" accept=".wav, .mp3" id="fileInput" class="upload" />
+            <span>Upload</span>
+        </div>
+        <!-- <input type="file" accept=".wav, .mp3" id="fileInput"> -->
+        <button class="btn-download" onclick="handleUpload()" id="btn-auto-click">
+            <div class="arrow"></div>
+         </button>
+    </div>
+
+    <div class="mirrordiv">
+        <p class="mirrorp">
+        <div id="resultDisplay">Upload an audio file to detect the guitar string.</div>
+        </p>
+    </div>
+    <div class="footer-basic footer-last">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                        class="icon ion-social-snapchat"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <hr style="height:2px;border-width:0;color:gray;background-color:white">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Sitemap</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
+            </ul>
+            <p class="copyright">Company Name © Play Guitar</p>
+        </footer>
+    </div>
+
+    <script>
+        function handleUpload() {
+            const fileInput = document.getElementById('fileInput');
+            const resultDisplay = document.getElementById('resultDisplay');
+
+            if (fileInput.files.length === 0) {
+                resultDisplay.textContent = 'Please select an audio file.';
+                return;
+            }
+
+            const file = fileInput.files[0];
+
+            // Here you would typically send the file to a backend for analysis.
+            // For simplicity, we'll just simulate a delay and a random string detection.
+            resultDisplay.textContent = 'Analyzing...';
+
+            setTimeout(() => {
+                // Simulate string detection (replace with your actual algorithm).
+                const detectedString = detectString(file);
+                resultDisplay.textContent = `Detected String: ${detectedString}`;
+            }, 2000); // Simulate a 2-second analysis delay.
+        }
+
+        function detectString(audioFile) {
+            // Replace this with your actual string detection algorithm.
+            // You would need to process the audio file and determine the string played.
+            // For simplicity, we'll just return a random string (E, A, D, G, B, or e).
+            const strings = ['E', 'A', 'D', 'G', 'B', 'e'];
+            const randomIndex = Math.floor(Math.random() * strings.length);
+            return strings[randomIndex];
+        }
+    </script>
+</body>
+
+</html>

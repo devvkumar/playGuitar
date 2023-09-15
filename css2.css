@@ -1,0 +1,431 @@
+.header-fixed {
+	background-color:#292c2f;
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+	box-sizing: border-box;
+	top:-100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+
+}
+
+/*
+	 We are clearing the body's margin and padding, so that the header fits properly.
+	 We are also adding a height to demonstrate the scrolling behavior. You can remove
+	 these styles.
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+
+.footer-basic {
+    position: relative;
+    height: 190px;
+    width: 100%;
+    margin: 30px;
+    /* padding:0px 0; */
+    background-color:#292c2f;
+    color:white;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    /* padding-bottom:25px; */
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+
+  .neon {
+    text-align:center;
+    
+    font-size:70px;
+    color:whitesmoke;
+  font-family:Erica One;
+  font-align:Center;
+  -webkit-text-stroke:1px #292c2f;
+  text-shadow:0px 1px 0 #292c2f,0px 2px 1px #292c2f,0px 3px 0 #292c2f,0px 4px 0 #292c2f,0px 5px 0 #292c2f,0px 6px 0 #292c2f,0px 7px 0 #292c2f,0px 8px 1px #292c2f,0px 9px 0 #292c2f,0px 10px 0 #292c2f,0px 11px 0 #292c2f,0px 12px 1px #292c2f,0px 13px 0 #292c2f,0px 14px 0 #292c2f,0px 15px 0 #292c2f,0px 16px 1px #292c2f,0px 17px 0 #292c2f,0px 18px 0 #000000,0px 19px 0 #000000,0px 20px 0 #000000,0px 21px 0 #000000,0px 22px 2px #000000;
+  }
+  
+
+  .mirrordiv{
+    color:#581845;
+    font-size:40px;
+    text-align: center;
+  }
+  
+  .mirrorp > :last-child {
+    transform: rotatex(180deg) translatey(15px);
+    -webkit-mask-image: linear-gradient(transparent 40%, white 90%);
+    mask-image: linear-gradient(transparent 50%, white 90%);
+    opacity: 0.7;
+  }
+  #container {
+    height: 290px;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes button-shadow{
+    from{
+      transform: rotate(0);
+      bottom: -5px;
+      right: -5px;
+      opacity: 1;
+    }to{
+      transform: rotate(40deg);
+      bottom: 50px;
+      right: -60px;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes button-arrow-rotate{
+    0%{
+        width: 15px;
+        margin: -25px auto 0;
+    }1%{
+        width: 10px;
+        height: 0px;
+        margin-top: 15px;
+        transform: rotate(45deg);
+    }100%{
+        width: 10px;
+        margin-top: 15px;
+        transform: rotate(45deg);
+        height: 35px;
+    }
+  }
+  
+  @keyframes button-arrow-down{
+    from{
+        bottom: -25px;
+        opacity: 1;
+    }to{
+        bottom: -40px;
+        opacity: 0;
+    }
+  }
+  
+  @keyframes button-arrow-up{
+    0%{
+        height: 20px;
+        transform: rotateZ(45deg);
+        right: -7px;
+    }1%{
+        right: 0px;
+        height: 10px;
+        width: 0;
+        transform: rotateZ(0);
+    }100%{
+        right: 0px;
+        height: 10px;
+        width: 20px;
+        transform: rotateZ(0);
+    }
+  }
+
+  
+button{
+    background-color: #292c2f;
+    width: 350px;
+    height: 100px;
+    border: none;
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s;
+    top: 60px;
+    
+    .arrow{
+      height: 25px;
+      width: 15px;
+      background-color: #99f3bd;
+      border-radius: 2px;
+      margin: -25px auto 0;
+      position: relative;
+      &:after{
+        content:'';
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        background-color: #99f3bd;
+        border-radius: 2px;
+        transform: rotateZ(45deg) translate(1px,7px);
+        bottom: 0;
+        right: -7px;
+        transition: all .5s;
+        transition-delay: .5s;
+      }
+      &:before{
+        content: '';
+        background-color: #99f3bd;
+        width: 25px;
+        height: 10px;
+        position: absolute;
+        left: -5px;
+        bottom: -25px;
+        border-radius: 2px;
+        transition: all .5s;
+      }
+    }
+    
+    &:after,&:before{
+      content:'';
+      position: absolute;
+      z-index: -1;
+      background-color: #99f3bd;
+      height: 100%;
+      width: 100%;
+      bottom: -5px;
+      right: -5px;
+      border-radius: 5px;
+    }
+    
+    &:after{
+        animation-play-state: pause; 
+    }
+    
+    &:active{
+      width: 180px;
+      height: 90px;
+    }
+    
+    &:focus{
+      &:after{   
+        animation: button-shadow 1s;
+      }
+      
+      .arrow{
+        animation: button-arrow-rotate .5s forwards;
+        animation-delay: .5s;
+        &:after{
+          animation: button-arrow-up .5s forwards;
+          animation-delay: .5s;
+        }
+        &:before{
+          animation: button-arrow-down .5s forwards;
+        }
+      }
+    }
+  }
+  .fileUpload {
+	background: #00bcbe;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 1.25em auto;/*20px/16px 0*/
+	overflow: hidden;
+	padding: 0.875em;/*14px/16px*/
+	position: relative;
+	text-align: center;
+	width: 120px;
+   cursor: pointer;
+}
+.fileUpload:hover, .fileUpload:active, .fileUpload:focus {
+	background: #00a2a4;
+  cursor: pointer;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 148px;
+    height: 46px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+    position: fixed;
+    right: 100%;
+    bottom: 100%;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
